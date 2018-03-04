@@ -1,0 +1,61 @@
+{
+  "compilerOptions": {
+    "outDir": "ts-build",//"build/dist",
+    "module": "esnext",
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "types": [
+      "node",
+      "jasmine",
+      "react-dom",
+      "react"
+    ],
+    //    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDir": "src",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": false,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    //    "noUnusedLocals": true,
+    "baseUrl": "./src",
+    "experimentalDecorators": true
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "src/setupTests.ts"
+  ]
+}
+//
+//{
+//  "compilerOptions": {
+//    "module": "es6",
+//    "target": "es2016",
+//    "noImplicitAny": false,
+//    "baseUrl": "src", // enables you to import relative to this folder
+//    "sourceMap": true, // make TypeScript generate sourcemaps
+//    "outDir": "ts-build", // output directory to build to (irrelevant because we use Webpack most of the time)
+//    "jsx": "preserve", // enable JSX mode, but "preserve" tells TypeScript to not transform it (we'll use Babel)
+//    "strict": true,
+//    "allowSyntheticDefaultImports": true,
+//    "types": [
+//      "node",
+//      "jasmine",
+//      "react-dom",
+//      "react"
+//    ]
+//  },
+//  "exclude": [
+//    "node_modules"
+//  ]
+//}

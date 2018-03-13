@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "ts-build",//"build/dist",
+    //"outDir": "ts-build",//"build/dist",
     "module": "esnext",
     "target": "es5",
     "lib": ["es6", "dom"],
@@ -8,7 +8,7 @@
     "allowSyntheticDefaultImports": true,
     "types": [
       "node",
-      "jasmine",
+      "jest",
       "react-dom",
       "react"
     ],
@@ -36,26 +36,4 @@
     "src/setupTests.ts"
   ]
 }
-//
-//{
-//  "compilerOptions": {
-//    "module": "es6",
-//    "target": "es2016",
-//    "noImplicitAny": false,
-//    "baseUrl": "src", // enables you to import relative to this folder
-//    "sourceMap": true, // make TypeScript generate sourcemaps
-//    "outDir": "ts-build", // output directory to build to (irrelevant because we use Webpack most of the time)
-//    "jsx": "preserve", // enable JSX mode, but "preserve" tells TypeScript to not transform it (we'll use Babel)
-//    "strict": true,
-//    "allowSyntheticDefaultImports": true,
-//    "types": [
-//      "node",
-//      "jasmine",
-//      "react-dom",
-//      "react"
-//    ]
-//  },
-//  "exclude": [
-//    "node_modules"
-//  ]
-//}
+

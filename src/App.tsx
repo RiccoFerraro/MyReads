@@ -1,24 +1,22 @@
-import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import * as React from 'react';
+import './App.css';
 
+const logo = require('./logo.svg');
 
-interface AppState  {
-    contacts: any,
-    screen : string // either 'list' or 'create'. enum is probably better.
-}
-class App extends Component<any, AppState> {
-    constructor(props: any, state: AppState) {
-        super(props, state);
-        this.state = {
-            contacts: [],
-            screen: 'list'
-        };
-    }
-
-    render() {
-        return <div className ='app'>
-        </div>
-    }
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+        <p className="App-intro">
+          To get started, edit <code>src/App.tsx</code> and save to reload.
+        </p>
+      </div>
+    );
+  }
 }
 
 export default App;

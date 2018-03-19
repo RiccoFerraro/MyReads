@@ -10,15 +10,7 @@ interface BookRoomProps extends React.HTMLProps<BookRoomProps> {
 }
 
 class BookRoom extends React.Component<BookRoomProps, any> {
-
-    getUniqueBookShelfNames(): Array<string | undefined> {
-        let allFoundBookShelfNames: Array<string | undefined> = this.props
-            .bookRegistry.Books.map(
-                (book) => book.shelf
-            );
-
-        return Array.from(new Set(allFoundBookShelfNames));
-    }
+    public static bookRoomPageURL: string = "/";
 
     render() {
         let registry : BookRegistryModel = this.props.bookRegistry;
@@ -38,6 +30,15 @@ class BookRoom extends React.Component<BookRoomProps, any> {
                 };
             </div>
         </div>;
+    }
+
+    private getUniqueBookShelfNames(): Array<string | undefined> {
+        let allFoundBookShelfNames: Array<string | undefined> = this.props
+            .bookRegistry.Books.map(
+                (book) => book.shelf
+            );
+
+        return Array.from(new Set(allFoundBookShelfNames));
     }
 }
 

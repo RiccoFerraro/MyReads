@@ -92,7 +92,7 @@ class MyReadsApplication extends React.Component<any, MyReadsAppState> {
     render() {
         return (
             <div className="MyReadsApp">
-                <Route path={Bookshelves.getRoutePath()} exact render={
+                <Route path={BookRoom.bookRoomPageURL} exact render={
                     (props) => {
                         return (
                             <BookRoom bookRegistry={this.state.bookRegistry}

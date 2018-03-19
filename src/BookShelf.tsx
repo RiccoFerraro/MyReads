@@ -10,54 +10,58 @@ interface BookshelfProps extends React.HTMLProps<any> {
 
 class Bookshelf extends React.Component<BookshelfProps, any>
 {
+    propTypes : BookshelfProps;
+
     constructor(propTypes: BookshelfProps) {
         super(propTypes);
         this.propTypes = propTypes;
-        // Initialize the state.
-        this.state = {query : ''};
-    }
-    propTypes : BookshelfProps;
-
-    updateQuery(query: string) : void {
-        this.setState({
-            query: query.trim()
-        });
-    }
-
-    // Clears any query state.
-    clearQuery() {
-        this.updateQuery('');
     }
 
     render() : React.ReactElement<BookshelfProps> {
-        let showingContacts = this.getMatchedContats(query, contacts);
+        let shelvedBooks = this.props.shelvedBooks;
 
         return (
             <div className="bookshelf">
                 <h2 className="bookshelf-title">Currently Reading</h2>
                 <div className="bookshelf-books">
                     <ol className="books-grid">
-                        <li>
-                        </li>
+                        { shelvedBooks.map((shelvedBook) => {
+                            return (
+                                <li>
+                                    <Book bookModel={shelvedBook}>
+
+                                    </Book>
+                                </li>
+                            );
+                        })}
                     </ol>
                 </div>
             </div>
         );
     }
 
-    private getMatchedContats(query: string, contacts: Array<any>) : Array<any> {
-        if (this.state.query) {
-            const match = new RegExp(EscapeRegex(query), 'i');
-            return contacts.filter((contact) =>
-                match.test(contact.name));
+    // // Clears any query state.
+    // clearQuery() {
+    //     this.updateQuery('');
+    // }
 
-        }
-        else {
-            return contacts;
-        }
-    }
+    // updateQuery(query: string) : void {
+    //     this.setState({
+    //         query: query.trim()
+    //     });
+    // }
+    // private getMatchedContats(query: string, contacts: Array<any>) : Array<any> {
+    //     if (this.state.query) {
+    //         const match = new RegExp(EscapeRegex(query), 'i');
+    //         return contacts.filter((contact) =>
+    //             match.test(contact.name));
+    //
+    //     }
+    //     else {
+    //         return contacts;
+    //     }
+    // }
 }
-
 
 
 export default Bookshelf;

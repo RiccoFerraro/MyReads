@@ -1,7 +1,12 @@
 class BookModel {
     id: string;
-    title: string;
-    image: string;
+    title?: string;
+    authors?: string[];
+    imageLinks?: {
+        smallThumbnail: string;
+        thumbnail: string;
+    };
+    shelf?: string;
 }
 
 export default BookModel;

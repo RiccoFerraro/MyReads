@@ -1,8 +1,7 @@
-import BookModel  from 'models/BookModel'
-import BookShelfModel  from 'models/'
+import BookModel from "models/BookModel";
 
 class BookRegistryModel {
-    BookToBookShelfMap: Map<BookModel, BookShelfModel>
+    Books: Array<BookModel>
 }
 
 export default BookRegistryModel;

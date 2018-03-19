@@ -15,6 +15,16 @@ interface MyReadsAppState {
 }
 
 class MyReadsApplication extends React.Component<any, MyReadsAppState> {
+    constructor(props: any, context: MyReadsAppState) {
+        super(props, context);
+
+        // Initialize the state.
+        this.state = {
+            bookRegistry: {
+                Books: []
+            }
+        };
+    }
 
     // Everytime we fully mount this Component, get all the books.
     componentDidMount() {

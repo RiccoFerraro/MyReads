@@ -8,11 +8,7 @@ interface BookshelfProps extends React.HTMLProps<any> {
     onUpdateBookShelf: (bookId: string, shelf: string) => void;
 }
 
-interface BookshelfState {
-    query: string
-}
-
-class Bookshelf extends React.Component<BookshelfProps, BookshelfState>
+class Bookshelf extends React.Component<BookshelfProps, any>
 {
     constructor(propTypes: BookshelfProps) {
         super(propTypes);
@@ -37,7 +33,15 @@ class Bookshelf extends React.Component<BookshelfProps, BookshelfState>
         let showingContacts = this.getMatchedContats(query, contacts);
 
         return (
-
+            <div className="bookshelf">
+                <h2 className="bookshelf-title">Currently Reading</h2>
+                <div className="bookshelf-books">
+                    <ol className="books-grid">
+                        <li>
+                        </li>
+                    </ol>
+                </div>
+            </div>
         );
     }
 

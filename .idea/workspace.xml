@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c2fd598-fc39-4810-9fda-c5136604d9fc" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/BookRoom.tsx" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/BookRoom.tsx" afterPath="$PROJECT_DIR$/src/BookRoom.tsx" />
       <change beforePath="$PROJECT_DIR$/src/BookShelf.tsx" afterPath="$PROJECT_DIR$/src/BookShelf.tsx" />
-      <change beforePath="$PROJECT_DIR$/src/MyReadsApp.tsx" afterPath="$PROJECT_DIR$/src/MyReadsApp.tsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,8 +24,8 @@
             <file leaf-file-name="BookShelf.tsx" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/BookShelf.tsx">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="1151">
-                    <caret line="58" column="28" lean-forward="true" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
+                  <state relative-caret-position="294">
+                    <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
                     <folding>
                       <element signature="e#0#41#0" expanded="true" />
                     </folding>
@@ -63,8 +62,8 @@
             <file leaf-file-name="App.tsx" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/App.tsx">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="274">
-                    <caret line="46" column="32" lean-forward="false" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+                  <state relative-caret-position="526">
+                    <caret line="46" column="57" lean-forward="true" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="57" />
                     <folding />
                   </state>
                 </provider>
@@ -175,8 +174,8 @@
       <file leaf-file-name="BookRoom.tsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BookRoom.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+            <state relative-caret-position="231">
+              <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="14" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -242,9 +241,9 @@
         <option value="$PROJECT_DIR$/src/models/BookRegistryModel.ts" />
         <option value="$PROJECT_DIR$/src/models/BookModel.ts" />
         <option value="$PROJECT_DIR$/src/App.tsx" />
-        <option value="$PROJECT_DIR$/src/BookRoom.tsx" />
         <option value="$PROJECT_DIR$/src/MyReadsApp.tsx" />
         <option value="$PROJECT_DIR$/src/BookShelf.tsx" />
+        <option value="$PROJECT_DIR$/src/BookRoom.tsx" />
       </list>
     </option>
   </component>
@@ -434,7 +433,7 @@
       <workItem from="1521050053044" duration="2517000" />
       <workItem from="1521056411052" duration="7908000" />
       <workItem from="1521130891929" duration="22421000" />
-      <workItem from="1521449134027" duration="728000" />
+      <workItem from="1521449134027" duration="1592000" />
     </task>
     <task id="LOCAL-00001" summary="Prior to Create-React-App Bootstrap">
       <created>1520960439465</created>
@@ -485,11 +484,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521444542102</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: Nearly finished work on BookRoom Component">
+      <created>1521449887334</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1521449887334</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49299000" />
+    <option name="totallyTimeSpent" value="50163000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -554,7 +560,9 @@
     <MESSAGE value="starter App.tsx" />
     <MESSAGE value="Scaffolding out the Begginings of the app" />
     <MESSAGE value="feat: Nearly finished work on MyReadsApp Component" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Nearly finished work on MyReadsApp Component" />
+    <MESSAGE value="feat: Nearly finished work on BookRoom" />
+    <MESSAGE value="feat: Nearly finished work on BookRoom Component" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Nearly finished work on BookRoom Component" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -746,6 +754,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -846,14 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="46" column="32" lean-forward="false" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/BookModel.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -880,22 +881,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BookRoom.tsx">
+    <entry file="file://$PROJECT_DIR$/src/App.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="526">
+          <caret line="46" column="57" lean-forward="true" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BookShelf.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1151">
-          <caret line="58" column="28" lean-forward="true" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
+        <state relative-caret-position="294">
+          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BookRoom.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>

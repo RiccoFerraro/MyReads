@@ -1,12 +1,8 @@
 import "src/App.css";
 import * as React from "react";
-import {History} from "history";
-import {Route} from "react-router";
 import BookRegistryModel from "models/BookRegistryModel";
-import {RouteComponentProps} from "react-router";
-import * as BooksAPI from "BooksAPI";
-import BookModel from "models/BookModel";
-import BookShelfModel from "models/BookShelfModel";
+import Bookshelf from "BookShelf"
+
 
 interface BookRoomProps extends React.HTMLProps<BookRoomProps> {
     bookRegistry: BookRegistryModel;
@@ -15,8 +11,8 @@ interface BookRoomProps extends React.HTMLProps<BookRoomProps> {
 
 class BookRoom extends React.Component<BookRoomProps, any> {
 
-    getUniqueBookShelfNames(): Array<string| undefined> {
-        let allFoundBookShelfNames: Array<string| undefined> = this.props
+    getUniqueBookShelfNames(): Array<string | undefined> {
+        let allFoundBookShelfNames: Array<string | undefined> = this.props
             .bookRegistry.Books.map(
                 (book) => book.shelf
             );
@@ -25,13 +21,18 @@ class BookRoom extends React.Component<BookRoomProps, any> {
     }
 
     render() {
+        let registry : BookRegistryModel = this.props.bookRegistry;
         return <div className="list-books-content">
             <div>
                 {
                     this.getUniqueBookShelfNames()
                         .forEach((shelf: string) => {
                         return (
-                            <BookShelf onUpdateBookShelf = {this.props.onUpdateBookShelf}/>
+                            <Bookshelf onUpdateBookShelf = {this.props.onUpdateBookShelf}
+                                       shelvedBooks = {registry.Books.filter((book) => {
+                                           book.shelf === shelf
+                                       })
+                            }/>
                         )
                     })
                 };

@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import EscapeRegex from 'escape-string-regexp';
+import BookModel from "models/BookModel";
 
 interface BookshelfProps extends React.HTMLProps<any> {
-    contacts : Array<any>,
-    onDeleteContact: (contact: object) => void
-    onNavigate: () => void
+    shelvedBooks: Array<BookModel>;
+    onUpdateBookShelf: (bookId: string, shelf: string) => void;
 }
 
 interface BookshelfState {
     query: string
 }
 
-class ListContacts extends React.Component<BookshelfProps, BookshelfState>
+class Bookshelf extends React.Component<BookshelfProps, BookshelfState>
 {
     constructor(propTypes: BookshelfProps) {
         super(propTypes);
@@ -56,4 +56,4 @@ class ListContacts extends React.Component<BookshelfProps, BookshelfState>
 
 
 
-export default ListContacts;
+export default Bookshelf;

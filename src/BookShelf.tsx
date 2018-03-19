@@ -34,51 +34,10 @@ class ListContacts extends React.Component<BookshelfProps, BookshelfState>
     }
 
     render() : React.ReactElement<BookshelfProps> {
-        const { contacts, onDeleteContact }: BookshelfProps = this.props;
-        const { query }: BookshelfState = this.state;
-
         let showingContacts = this.getMatchedContats(query, contacts);
 
         return (
-            {/*<div className='list-contacts'>*/}
-                {/*<div className='list-contacts-top'>*/}
-                    {/*<input*/}
-                        {/*className='search-contacts'*/}
-                        {/*type='text'*/}
-                        {/*placeholder="Search contacts"*/}
-                        {/*value={query}*/}
-                        {/*onChange={(event) => this.updateQuery(event.target.value)}*/}
-                    {/*/>*/}
-                    {/*<Link*/}
-                        {/*to ="/create"*/}
-                        {/*className='add-contact'*/}
-                    {/*> Add Contact*/}
-                    {/*</Link>*/}
-                {/*</div>*/}
 
-                {/*{showingContacts.length !== contacts.length && (*/}
-                    {/*<div className='showing-contacts'>*/}
-                        {/*<span>Now showing {showingContacts.length} of {contacts.length} total</span>*/}
-                        {/*<button onClick={() => this.clearQuery()}>Show all</button>*/}
-                    {/*</div>*/}
-                {/*)}*/}
-                {/*<ol className='contact-list'>*/}
-                    {/*{showingContacts.map((contact) =>*/}
-                        {/*<li key={contact.id}>*/}
-                            {/*<div className='contact-avatar' style ={{*/}
-                                {/*backgroundImage: `url(${contact.avatarURL})`*/}
-                            {/*}} />*/}
-                            {/*<div className ='contact-details'>*/}
-                                {/*<p>{contact.name}</p>*/}
-                                {/*<p>{contact.email}</p>*/}
-                            {/*</div>*/}
-                            {/*<button onClick={() => onDeleteContact(contact)} className='contact-remove'>*/}
-                                {/*Remove*/}
-                            {/*</button>*/}
-                        {/*</li>*/}
-                    {/*)}*/}
-                {/*</ol>*/}
-            {/*</div>*/}
         );
     }
 

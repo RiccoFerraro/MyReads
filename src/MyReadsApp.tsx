@@ -5,12 +5,13 @@ import {Route} from "react-router";
 import BookRegistryModel from "models/BookRegistryModel";
 import * as BooksAPI from "BooksAPI";
 import BookModel from "models/BookModel";
+import BookRoom from "BookRoom";
 import BookShelfModel from "models/BookShelfModel";
 import SearchPage from "src/components/myReads/SearchPage";
 
 
 interface MyReadsAppState {
-    BookRegistry: BookRegistryModel
+    bookRegistry: BookRegistryModel
 }
 
 class MyReadsApplication extends React.Component<any, MyReadsAppState> {
@@ -32,8 +33,9 @@ class MyReadsApplication extends React.Component<any, MyReadsAppState> {
                     Books: bookModels
                 };
 
-                this.setState({
-                    BookRegistry: bookRegistry
+                this.setState((state: MyReadsAppState) => {
+                    state.bookRegistry = bookRegistry;
+                    return state;
                 });
             });
     }
@@ -43,7 +45,7 @@ class MyReadsApplication extends React.Component<any, MyReadsAppState> {
         BooksAPI.update(bookId, shelf)
             .then((data) => {
                this.setState((state: MyReadsAppState) => {
-                   let book = state.BookRegistry.Books
+                   let book = state.bookRegistry.Books
                        .find((book) => book.id === bookId);
 
                    if(book) {
@@ -82,14 +84,15 @@ class MyReadsApplication extends React.Component<any, MyReadsAppState> {
             <div className="MyReadsApp">
                 <Route path={Bookshelves.getRoutePath()} exact render={
                     (props) => {
-                        return <BookRoom bookshelves={this.buildBookshelves(this.state.books)}
-                                         onUpdateBookShelf={this.updateBook}
-                                              {...props} />
+                        return (
+                            <BookRoom bookRegistry={this.state.bookRegistry}
+                                        onUpdateBookShelf={ (bookId: string, shelf: string) => this.updateBookShelf(bookId, shelf)} />
+                        );
                     }
                 }/>
                 <Route path={SearchPage.getRoutePath()} render={
                     (props) => {
-                        return <SearchPage onClose={() => { props.history.push(); }}
+                        return <SearchPage onClose={() => { props.history.push(""); }}
                                            onUpdateBookShelf={(bookId: string, shelf: string) => this.updateBookShelf(bookId, shelf)}
                                            onGetFullBookData={this.getFullBookData}/>
                     }

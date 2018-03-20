@@ -47,9 +47,11 @@ class Bookshelf extends React.Component<BookshelfProps, any>
                         { this.shelvedBooks.map((shelvedBook) => {
                             return (
                                 <li>
-                                    <Book bookModel={shelvedBook}
-                                          onUpdateBookShelf={this.onUpdateBookShelf}
-                                          possibleShelves={this.possibleShelves}
+                                    <Book
+                                        key={shelvedBook.id}
+                                        bookModel={shelvedBook}
+                                        onUpdateBookShelf={this.onUpdateBookShelf}
+                                        possibleShelves={this.possibleShelves}
                                     />
                                 </li>
                             );

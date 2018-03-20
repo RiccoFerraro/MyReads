@@ -3,11 +3,12 @@ import * as React from "react";
 import {History} from "history";
 import {Route} from "react-router";
 import BookRegistryModel from "models/BookRegistryModel";
-import * as BooksAPI from "BooksAPI";
+import * as BooksAPI from "utility/BooksAPI";
 import BookModel from "models/BookModel";
 import BookRoom from "BookRoom";
 import BookShelfModel from "models/BookShelfModel";
 import SearchPage from "src/components/myReads/SearchPage";
+import BookRepository from "utility/BookRepository"
 
 
 interface MyReadsAppState {
@@ -26,23 +27,19 @@ class MyReadsApplication extends React.Component<any, MyReadsAppState> {
         };
     }
 
-    // Everytime we fully mount this Component, get all the books.
+    // Every time we fully mount this Component, get all the books.
     componentDidMount() {
         this.getAllBooks();
     }
 
     private getAllBooks() : void {
-        BooksAPI.getAll()
+        BookRepository.getAllBooks()
             .then((books) => {
-                let bookModels: Array<BookModel> = books.map(
-                    (book)=> {
-                        return MyReadsApplication.extractBook(book);
-                });
-
                 let bookRegistry: BookRegistryModel = {
-                    Books: bookModels
+                    Books: books
                 };
 
+                // This will cause a re-render, which in turn forces any child Component who uses this.state to re-evaluate/render itself.
                 this.setState((state: MyReadsAppState) => {
                     state.bookRegistry = bookRegistry;
                     return state;
@@ -68,26 +65,7 @@ class MyReadsApplication extends React.Component<any, MyReadsAppState> {
 
     }
 
-    private static extractBook(book) {
-        let bookModel: BookModel = new BookModel();
 
-        if (book.id) {
-            bookModel.id = book.id
-        }
-        if (book.title) {
-            bookModel.title = book.title
-        }
-        if (book.authors) {
-            bookModel.authors = book.authors
-        }
-        if (book.imageLinks) {
-            bookModel.imageLinks = {
-                smallThumbnail: book.imageLinks.smallThumbnail,
-                thumbnail: book.imageLinks.thumbnail
-            }
-        }
-        return bookModel;
-    }
 
     render() {
         return (
@@ -104,7 +82,7 @@ class MyReadsApplication extends React.Component<any, MyReadsAppState> {
                     (props) => {
                         return <SearchPage onClose={() => { props.history.push(""); }}
                                            onUpdateBookShelf={(bookId: string, shelf: string) => this.updateBookShelf(bookId, shelf)}
-                                           onGetFullBookData={this.getFullBookData}/>
+                                           onGetFullBookData={this.getFullBookData()}/>
                     }
                 }/>
             </div>

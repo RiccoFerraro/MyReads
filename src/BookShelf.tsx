@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import EscapeRegex from 'escape-string-regexp';
 import BookModel from "models/BookModel";
+import Book from "Book"
 
-interface BookshelfProps extends React.HTMLProps<any> {
+interface BookshelfProps extends React.HTMLProps<BookshelfProps>{
     shelvedBooks: Array<BookModel>;
+    possibleShelves: Array<string | undefined>; // I DO NOT LIKE plubming this through here so that the librarian can use it. This violates SRP, It also violates LSP in some regards. So I hear, Redux solves this problem. That's for lesson 2 though.
     onUpdateBookShelf: (bookId: string, shelf: string) => void;
+
 }
 
 class Bookshelf extends React.Component<BookshelfProps, any>
@@ -17,20 +18,31 @@ class Bookshelf extends React.Component<BookshelfProps, any>
         this.propTypes = propTypes;
     }
 
-    render() : React.ReactElement<BookshelfProps> {
-        let shelvedBooks = this.props.shelvedBooks;
+    private get shelvedBooks() : Array<BookModel>  {
+        return this.props.shelvedBooks;
+    }
 
+    private get possibleShelves() : Array<string>  {
+        return this.props.possibleShelves;
+    }
+
+    private get onUpdateBookShelf() : (bookId: string, shelf: string) => void {
+        return this.props.onUpdateBookShelf;
+    }
+
+    render() : React.ReactElement<BookshelfProps> {
         return (
             <div className="bookshelf">
                 <h2 className="bookshelf-title">Currently Reading</h2>
                 <div className="bookshelf-books">
                     <ol className="books-grid">
-                        { shelvedBooks.map((shelvedBook) => {
+                        { this.shelvedBooks.map((shelvedBook) => {
                             return (
                                 <li>
-                                    <Book bookModel={shelvedBook}>
-
-                                    </Book>
+                                    <Book bookModel={shelvedBook}
+                                          onUpdateBookShelf={this.onUpdateBookShelf}
+                                          possibleShelves={this.possibleShelves}
+                                    />
                                 </li>
                             );
                         })}

@@ -1,8 +1,10 @@
 import * as React from "react";
+import { Link } from 'react-router-dom';
 import BookRegistryModel from "models/BookRegistryModel";
 import Bookshelf from "components/BookShelf"
 import BookFactory from "utility/BookFactory"
 import BookModel from "models/BookModel";
+import SearchBooks from "components/SearchBooks";
 
 interface BookRoomProps extends React.HTMLProps<BookRoomProps> {
     bookRegistry: BookRegistryModel;
@@ -51,6 +53,10 @@ class BookRoom extends React.Component<BookRoomProps, any> {
                         })
                     }
                 </div>
+
+                <Link className="open-search link" to={SearchBooks.searchBooksPageURL}>
+                    Add a book
+                </Link>
         </div>);
     }
 

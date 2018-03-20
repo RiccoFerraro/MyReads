@@ -2,7 +2,7 @@ import "src/App.css";
 import * as React from "react";
 import BookRegistryModel from "models/BookRegistryModel";
 import Bookshelf from "components/BookShelf"
-import BookRepository from "utility/BookRepository"
+import BookRepository from "utility/BookFactory"
 import BookModel from "models/BookModel";
 
 interface BookRoomProps extends React.HTMLProps<BookRoomProps> {

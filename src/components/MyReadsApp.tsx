@@ -8,7 +8,7 @@ import BookModel from "models/BookModel";
 import BookRoom from "components/BookRoom";
 import BookShelfModel from "models/BookShelfModel";
 import SearchPage from "src/components/myReads/SearchPage";
-import BookRepository from "utility/BookRepository"
+import BookRepository from "utility/BookFactory"
 
 
 interface MyReadsAppState {

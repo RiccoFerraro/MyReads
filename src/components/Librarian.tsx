@@ -25,12 +25,14 @@ class Librarian extends React.Component<ILibrarianProps, any>
         return this.props.possibleShelves;
     }
 
-
-
     render() : React.ReactElement<ILibrarianProps> {
         return (
             <div className="book-shelf-changer">
-                <select>
+                <select value={this.CurrentShelf}
+                        onChange={(event) => {
+                            this.props.onUpdateBookShelf(event.target.value);
+                        }
+                }>
                     <option value="none" disabled>Move to...</option>
                     {this.PossibleShelves.map((shelf) => {
                         return (

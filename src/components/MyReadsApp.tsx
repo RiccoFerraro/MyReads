@@ -1,6 +1,6 @@
 import * as React from "react";
 import {History} from "history";
-import {Route} from "react-router";
+import { Route } from 'react-router-dom';
 import BookRegistryModel from "models/BookRegistryModel";
 import * as BooksAPI from "utility/BooksAPI";
 import BookRoom from "components/BookRoom";
@@ -73,8 +73,8 @@ class MyReadsApplication extends React.Component<any, MyReadsAppState> {
                     }
                 }/>
                 <Route path={SearchBooks.searchBooksPageURL} render={
-                    (props) => {
-                        return <SearchBooks onCloseSearch={() => { props.history.push(BookRoom.bookRoomPageURL); }}
+                    ({history}) => {
+                        return <SearchBooks onCloseSearch={() => { history.push(BookRoom.bookRoomPageURL); }}
                                            onUpdateBookShelf={(bookId: string, shelf: string) => this.updateBookShelf(bookId, shelf)}
                                            />
                     }

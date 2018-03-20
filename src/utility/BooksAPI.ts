@@ -1,16 +1,16 @@
-import debounce from "debounce-promise"
-const api = "https://reactnd-books-api.udacity.com"
+import debounce from "debounce-promise";
+const api = "https://reactnd-books-api.udacity.com";
 
 
 // Generate a unique token for storing your bookshelf data on the backend server.
 let token = localStorage.token
 if (!token)
-    token = localStorage.token = Math.random().toString(36).substr(-8)
+    token = localStorage.token = Math.random().toString(36).substr(-8);
 
 const headers = {
     'Accept': 'application/json',
     'Authorization': token
-}
+};
 
 const debounceTime = 200;
 
@@ -20,32 +20,45 @@ export const get = (bookId) =>
         .then(data => data.book)
 
 export const getAll = () => {
-    return debounce(fetch(`${api}/books`, {headers})
+    let debouncedPromise = debounce(() => {
+        return fetch(`${api}/books`, {headers})
         .then(res => res.json())
-        .then(data => data.books), debounceTime)
-}
+        .then(data => data.books)}
+    , debounceTime);
+
+    return debouncedPromise();
+};
 
 export const update = (book, shelf) => {
-    return debounce(fetch(`${api}/books/${book.id}`, {
-        method: 'PUT',
-        headers: {
-            ...headers,
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({shelf})
-    }).then(res => res.json()), debounceTime)
+    let debouncedPromise = debounce(() => {
+        return fetch(`${api}/books/${book.id}`, {
+                method: 'PUT',
+                headers: {
+                    ...headers,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({shelf})
+            })
+                .then(res => res.json())}
+    , debounceTime);
 
-}
+    return debouncedPromise();
+};
 
 export const search = (query) => {
-    return debounce(fetch(`${api}/search`, {
-        method: 'POST',
-        headers: {
-            ...headers,
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ query })
-    }).then(res => res.json())
-        .then(data => data.books), debounceTime)
-}
+    let debouncedPromise = debounce(() => {
+        return fetch(`${api}/search`, {
+                method: 'POST',
+                headers: {
+                    ...headers,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ query })
+            })
+            .then(res => res.json())
+            .then(data => data.books)}
+        , debounceTime);
+
+    return debouncedPromise();
+};
 

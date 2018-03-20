@@ -31,28 +31,27 @@ class BookRoom extends React.Component<BookRoomProps, any> {
 
     private filterBookRegistryByShelf(shelf: string): Array<BookModel> {
         return this.BookRegistry
-            .Books.filter((book) => {
-                book.shelf === shelf
-            });
+            .Books.filter((book) => book.shelf === shelf);
     }
 
     render() {
-        return <div className="list-books-content">
-            <div>
-                {
-                    this.possibleShelves.forEach((possibleShelf: string) => {
-                        return (
-                            <Bookshelf
-                                       title={possibleShelf}
-                                       shelvedBooks={this.filterBookRegistryByShelf(possibleShelf)}
-                                       possibleShelves={BookFactory.getPossibleBookShelves(this.BookRegistry.Books)}
-                                       onUpdateBookShelf={(bookId: string, shelf: string) => this.onUpdateBookShelf(bookId, shelf)}
-                            />
-                        )
-                    })
-                };
-            </div>
-        </div>;
+        return (
+            <div className="list-books-content">
+                <div>
+                    {this.possibleShelves.map((possibleShelf: string) => {
+                            return (
+                                <Bookshelf
+                                           key = {possibleShelf}
+                                           title={possibleShelf}
+                                           shelvedBooks={this.filterBookRegistryByShelf(possibleShelf)}
+                                           possibleShelves={this.possibleShelves}
+                                           onUpdateBookShelf={(bookId: string, shelf: string) => this.onUpdateBookShelf(bookId, shelf)}
+                                />
+                            );
+                        })
+                    }
+                </div>
+        </div>);
     }
 
 

@@ -40,6 +40,9 @@ class BookFactory {
         if (book.title) {
             bookModel.title = book.title
         }
+        if (book.shelf) {
+            bookModel.shelf = book.shelf
+        }
         if (book.authors) {
             bookModel.authors = book.authors
         }

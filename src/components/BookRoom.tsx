@@ -1,7 +1,7 @@
 import "src/App.css";
 import * as React from "react";
 import BookRegistryModel from "models/BookRegistryModel";
-import Bookshelf from "BookShelf"
+import Bookshelf from "components/BookShelf"
 import BookRepository from "utility/BookRepository"
 import BookModel from "models/BookModel";
 

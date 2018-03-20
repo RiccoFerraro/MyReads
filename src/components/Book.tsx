@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BookModel from "models/BookModel";
-import Librarian from "Librarian";
+import Librarian from "components/Librarian";
 
 interface IBookProps extends React.HTMLProps<IBookProps> {
     bookModel: BookModel

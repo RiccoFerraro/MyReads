@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BookModel from "models/BookModel";
-import Book from "Book"
+import Book from "components/Book"
 
 interface BookshelfProps extends React.HTMLProps<BookshelfProps>{
     shelvedBooks: Array<BookModel>;

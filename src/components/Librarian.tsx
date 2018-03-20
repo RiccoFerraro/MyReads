@@ -26,9 +26,11 @@ class Librarian extends React.Component<ILibrarianProps, any>
         return this.props.possibleShelves;
     }
 
-    private formatShelf(shelf: string | undefined){
-        if(!shelf)
-            return String.Empty;
+    private formatShelf(shelf: string | undefined) {
+        // If the string is empty
+        if(!(shelf) ||  shelf.length === 0 || !shelf.trim()) {
+            return shelf;
+        }
         let upperCaseWithAddedSpaceResult = shelf.replace(/([A-Z])/g, " $1");
 
         let result = `${upperCaseWithAddedSpaceResult.charAt(0)

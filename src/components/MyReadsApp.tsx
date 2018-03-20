@@ -62,10 +62,7 @@ class MyReadsApplication extends React.Component<any, MyReadsAppState> {
                    return state;
                })
             });
-
     }
-
-
 
     render() {
         return (

@@ -2,7 +2,7 @@ import "src/App.css";
 import * as React from "react";
 import BookRegistryModel from "models/BookRegistryModel";
 import Bookshelf from "components/BookShelf"
-import BookRepository from "utility/BookFactory"
+import BookFactory from "utility/BookFactory"
 import BookModel from "models/BookModel";
 
 interface BookRoomProps extends React.HTMLProps<BookRoomProps> {
@@ -12,7 +12,7 @@ interface BookRoomProps extends React.HTMLProps<BookRoomProps> {
 
 class BookRoom extends React.Component<BookRoomProps, any> {
     public static bookRoomPageURL: string = "/";
-    shelvesThatShouldAlwaysExist: Array<string> = ["currentlyReading", "read", "wantToRead"];
+
 
     constructor(props: BookRoomProps) {
         super(props);
@@ -24,13 +24,6 @@ class BookRoom extends React.Component<BookRoomProps, any> {
 
     private get onUpdateBookShelf() : (bookId: string, shelf: string) => void {
         return this.props.onUpdateBookShelf;
-    }
-
-    private get possibleBookShelves() : Array<string | undefined> {
-        let foundShelves = BookRepository.getUniqueBookShelfNames(this.BookRegistry.Books);
-        let allShelvesWithRepeats = foundShelves.concat(this.shelvesThatShouldAlwaysExist);
-        let uniqueShelves = new Set(allShelvesWithRepeats);
-        return Array.from(uniqueShelves);
     }
 
     private filterBookRegistryByShelf(shelf: string): Array<BookModel> {
@@ -49,7 +42,7 @@ class BookRoom extends React.Component<BookRoomProps, any> {
                             <Bookshelf
                                        title={possibleShelf}
                                        shelvedBooks={this.filterBookRegistryByShelf(possibleShelf)}
-                                       possibleShelves={this.possibleBookShelves}
+                                       possibleShelves={BookFactory.getPossibleBookShelves(this.BookRegistry.Books)}
                                        onUpdateBookShelf={(bookId: string, shelf: string) => this.onUpdateBookShelf(bookId, shelf)}
                             />
                         )

@@ -7,7 +7,7 @@ import BookModel from "models/BookModel";
 
 interface BookRoomProps extends React.HTMLProps<BookRoomProps> {
     bookRegistry: BookRegistryModel;
-    onUpdateBookShelf:  (bookId: string, shelf: string) => void;
+    onUpdateBookShelf: (bookId: string, shelf: string) => void;
 }
 
 class BookRoom extends React.Component<BookRoomProps, any> {
@@ -20,6 +20,10 @@ class BookRoom extends React.Component<BookRoomProps, any> {
 
     private get BookRegistry(): BookRegistryModel {
         return this.props.bookRegistry;
+    }
+
+    private get possibleShelves(): Array<string | undefined> {
+        return BookFactory.getPossibleBookShelves(this.BookRegistry.Books);
     }
 
     private get onUpdateBookShelf() : (bookId: string, shelf: string) => void {
@@ -37,7 +41,7 @@ class BookRoom extends React.Component<BookRoomProps, any> {
         return <div className="list-books-content">
             <div>
                 {
-                    this.possibleBookShelves.forEach((possibleShelf: string) => {
+                    this.possibleShelves.forEach((possibleShelf: string) => {
                         return (
                             <Bookshelf
                                        title={possibleShelf}

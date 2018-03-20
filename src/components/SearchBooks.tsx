@@ -9,6 +9,7 @@ import BookModel from "models/BookModel";
 
 interface SearchBooksProps extends React.HTMLProps<SearchBooksProps> {
     onUpdateBookShelf:  (bookId: string, shelf: string) => void;
+    onCloseSearch: () => void;
 }
 
 interface SearchBooksState {
@@ -96,7 +97,7 @@ class SearchBooks extends React.Component<SearchBooksProps, SearchBooksState> {
         return (
             <div className="search-books">
                 <div className="search-books-bar">
-                    <a className="close-search" onClick={this.props.onClose}>Close</a>
+                    <a className="close-search" onClick={this.props.onCloseSearch}>Close</a>
                     <div className="search-books-input-wrapper">
                         {/*
                           NOTES: The search from BooksAPI is limited to a particular set of search terms.

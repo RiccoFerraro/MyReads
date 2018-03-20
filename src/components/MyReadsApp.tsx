@@ -4,10 +4,8 @@ import {History} from "history";
 import {Route} from "react-router";
 import BookRegistryModel from "models/BookRegistryModel";
 import * as BooksAPI from "utility/BooksAPI";
-import BookModel from "models/BookModel";
 import BookRoom from "components/BookRoom";
-import BookShelfModel from "models/BookShelfModel";
-import SearchPage from "src/components/myReads/SearchPage";
+import SearchBooks from "components/SearchBooks";
 import BookRepository from "utility/BookFactory"
 
 
@@ -75,11 +73,11 @@ class MyReadsApplication extends React.Component<any, MyReadsAppState> {
                         );
                     }
                 }/>
-                <Route path={SearchPage.searchBooksPageURL} render={
+                <Route path={SearchBooks.searchBooksPageURL} render={
                     (props) => {
-                        return <SearchPage onClose={() => { props.history.push(BookRoom.bookRoomPageURL); }}
+                        return <SearchBooks onCloseSearch={() => { props.history.push(BookRoom.bookRoomPageURL); }}
                                            onUpdateBookShelf={(bookId: string, shelf: string) => this.updateBookShelf(bookId, shelf)}
-                                           onGetFullBookData={this.getFullBookData()}/>
+                                           />
                     }
                 }/>
             </div>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import IBookShelfUpdaterProps from "models/IBookShelfUpdaterProps"
-import BookModel from "models/BookModel";
+import TitleUtility from "utility/TitleUtility"
 
 interface ILibrarianProps extends React.HTMLProps<ILibrarianProps> {
     currentBookShelf: string | undefined;
@@ -26,18 +25,7 @@ class Librarian extends React.Component<ILibrarianProps, any>
         return this.props.possibleShelves;
     }
 
-    private formatShelf(shelf: string | undefined) {
-        // If the string is empty
-        if(!(shelf) ||  shelf.length === 0 || !shelf.trim()) {
-            return shelf;
-        }
-        let upperCaseWithAddedSpaceResult = shelf.replace(/([A-Z])/g, " $1");
 
-        let result = `${upperCaseWithAddedSpaceResult.charAt(0)
-            .toUpperCase()}${upperCaseWithAddedSpaceResult.slice(1)}`;
-
-        return result;
-    }
 
     render() : React.ReactElement<ILibrarianProps> {
         return (
@@ -47,7 +35,7 @@ class Librarian extends React.Component<ILibrarianProps, any>
                     {this.PossibleShelves.map((shelf) => {
                         return (
                             <option key={shelf} value={shelf}>
-                                {this.formatShelf(shelf)}
+                                {TitleUtility.makePascalOrCamelCaseToTitle(shelf)}
                             </option>
                             );
                     })}

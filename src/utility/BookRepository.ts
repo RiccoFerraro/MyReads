@@ -10,7 +10,7 @@ class BookFactory {
                         return BookFactory.extractBook(book);
                     });
 
-                    return bookModels;
+                return bookModels;
             });
     }
 
@@ -23,29 +23,29 @@ class BookFactory {
     }
 
     public static extractBook(book): BookModel {
-            let bookModel: BookModel = new BookModel();
+        let bookModel: BookModel = new BookModel();
 
-            if (book.id) {
-                bookModel.id = book.id
+        if (book.id) {
+            bookModel.id = book.id
+        }
+        if (book.title) {
+            bookModel.title = book.title
+        }
+        if (book.authors) {
+            bookModel.authors = book.authors
+        }
+        if (book.imageLinks) {
+            bookModel.imageLinks = {
+                smallThumbnail: book.imageLinks.smallThumbnail,
+                thumbnail: book.imageLinks.thumbnail
             }
-            if (book.title) {
-                bookModel.title = book.title
-            }
-            if (book.authors) {
-                bookModel.authors = book.authors
-            }
-            if (book.imageLinks) {
-                bookModel.imageLinks = {
-                    smallThumbnail: book.imageLinks.smallThumbnail,
-                    thumbnail: book.imageLinks.thumbnail
-                }
-            }
-            return bookModel;
-     }
+        }
+        return bookModel;
+    }
 
-     public static searchBook(books: Array<BookModel>) {
+    public static searchBook(books: Array<BookModel>) {
 
-     }
+    }
 }
 
 export default BookFactory;

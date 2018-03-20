@@ -11,12 +11,12 @@ interface BookRoomProps extends React.HTMLProps<BookRoomProps> {
 }
 
 class BookRoom extends React.Component<BookRoomProps, any> {
+    public static bookRoomPageURL: string = "/";
     shelvesThatShouldAlwaysExist: Array<string> = ["currentlyReading", "read", "wantToRead"];
 
     constructor(props: BookRoomProps) {
         super(props);
     }
-    public static bookRoomPageURL: string = "/";
 
     private get BookRegistry(): BookRegistryModel {
         return this.props.bookRegistry;
@@ -44,10 +44,11 @@ class BookRoom extends React.Component<BookRoomProps, any> {
         return <div className="list-books-content">
             <div>
                 {
-                    this.possibleBookShelves.forEach((shelf: string) => {
+                    this.possibleBookShelves.forEach((possibleShelf: string) => {
                         return (
                             <Bookshelf
-                                       shelvedBooks={this.filterBookRegistryByShelf(shelf)}
+                                       title={possibleShelf}
+                                       shelvedBooks={this.filterBookRegistryByShelf(possibleShelf)}
                                        possibleShelves={this.possibleBookShelves}
                                        onUpdateBookShelf={(bookId: string, shelf: string) => this.onUpdateBookShelf(bookId, shelf)}
                             />

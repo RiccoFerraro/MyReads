@@ -1,4 +1,3 @@
-import "src/App.css";
 import * as React from "react";
 import {History} from "history";
 import {Route} from "react-router";

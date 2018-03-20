@@ -7,7 +7,7 @@ class BookFactory {
             .then((books) => {
                 let bookModels: Array<BookModel> = books.map(
                     (book)=> {
-                        return BookFactory.extractBook(book);
+                        return BookFactory.extractBookModel(book);
                     });
 
                 return bookModels;
@@ -22,7 +22,7 @@ class BookFactory {
         return Array.from(new Set(allFoundBookShelfNames));
     }
 
-    public static extractBook(book): BookModel {
+    public static extractBookModel(book): BookModel {
         let bookModel: BookModel = new BookModel();
 
         if (book.id) {

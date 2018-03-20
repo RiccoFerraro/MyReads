@@ -78,9 +78,9 @@ class MyReadsApplication extends React.Component<any, MyReadsAppState> {
                         );
                     }
                 }/>
-                <Route path={SearchPage.getRoutePath()} render={
+                <Route path={SearchPage.searchBooksPageURL} render={
                     (props) => {
-                        return <SearchPage onClose={() => { props.history.push(""); }}
+                        return <SearchPage onClose={() => { props.history.push(BookRoom.bookRoomPageURL); }}
                                            onUpdateBookShelf={(bookId: string, shelf: string) => this.updateBookShelf(bookId, shelf)}
                                            onGetFullBookData={this.getFullBookData()}/>
                     }

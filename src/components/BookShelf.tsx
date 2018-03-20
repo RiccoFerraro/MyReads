@@ -60,27 +60,6 @@ class Bookshelf extends React.Component<BookshelfProps, any>
         );
     }
 
-    // // Clears any query state.
-    // clearQuery() {
-    //     this.updateQuery('');
-    // }
-
-    // updateQuery(query: string) : void {
-    //     this.setState({
-    //         query: query.trim()
-    //     });
-    // }
-    // private getMatchedContats(query: string, contacts: Array<any>) : Array<any> {
-    //     if (this.state.query) {
-    //         const match = new RegExp(EscapeRegex(query), 'i');
-    //         return contacts.filter((contact) =>
-    //             match.test(contact.name));
-    //
-    //     }
-    //     else {
-    //         return contacts;
-    //     }
-    // }
 }
 
 

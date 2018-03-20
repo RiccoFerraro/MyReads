@@ -22,7 +22,7 @@ class Bookshelf extends React.Component<BookshelfProps, any>
         return this.props.shelvedBooks;
     }
 
-    private get possibleShelves() : Array<string>  {
+    private get possibleShelves() : Array<string | undefined>  {
         return this.props.possibleShelves;
     }
 

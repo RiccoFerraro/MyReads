@@ -4,7 +4,7 @@ import BookModel from "models/BookModel";
 
 interface ILibrarianProps extends React.HTMLProps<ILibrarianProps> {
     currentBookShelf: string | undefined;
-    possibleShelves: Array<string>;
+    possibleShelves: Array<string | undefined>;
     onUpdateBookShelf: (shelf: string) => void;
 }
 
@@ -22,11 +22,13 @@ class Librarian extends React.Component<ILibrarianProps, any>
         return this.props.currentBookShelf;
     }
 
-    private get PossibleShelves() : Array<string> {
+    private get PossibleShelves() : Array<string | undefined> {
         return this.props.possibleShelves;
     }
 
-    private formatShelf(shelf: string){
+    private formatShelf(shelf: string | undefined){
+        if(!shelf)
+            return String.Empty;
         let upperCaseWithAddedSpaceResult = shelf.replace(/([A-Z])/g, " $1");
 
         let result = `${upperCaseWithAddedSpaceResult.charAt(0)

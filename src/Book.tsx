@@ -4,7 +4,7 @@ import Librarian from "Librarian";
 
 interface IBookProps extends React.HTMLProps<IBookProps> {
     bookModel: BookModel
-    possibleShelves: Array<string>;
+    possibleShelves: Array<string | undefined>;
     onUpdateBookShelf: (bookId: string, shelf: string) => void;
 }
 
@@ -20,7 +20,7 @@ class Book extends React.Component<IBookProps>
         return this.props.bookModel;
     }
 
-    private get possibleShelves() : Array<string> {
+    private get possibleShelves() : Array<string | undefined> {
         return this.props.possibleShelves;
     }
 

@@ -2,7 +2,7 @@ import * as BooksAPI from "utility/BooksAPI";
 import BookModel from "models/BookModel";
 
 class BookFactory {
-    private static shelvesThatShouldAlwaysExist: Array<string> = ["currentlyReading", "read", "wantToRead"];
+    private static shelvesThatShouldAlwaysExist: Array<string | undefined> = ["currentlyReading", "read", "wantToRead"];
     public static getAllBooks(): Promise<Array<BookModel>> {
         return BooksAPI.getAll()
             .then((books) => {
@@ -26,7 +26,7 @@ class BookFactory {
     public static getPossibleBookShelves(books: Array<BookModel>)
         : Array<string | undefined> {
         let foundShelves = BookFactory.getUniqueBookShelfNames(books);
-        let allShelvesWithRepeats = foundShelves.concat(BookFactory.shelvesThatShouldAlwaysExist);
+        let allShelvesWithRepeats = BookFactory.shelvesThatShouldAlwaysExist.concat(foundShelves);
         let uniqueShelves = new Set(allShelvesWithRepeats);
         return Array.from(uniqueShelves);
     }

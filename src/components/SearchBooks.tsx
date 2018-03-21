@@ -127,7 +127,7 @@ class SearchBooks extends React.Component<SearchBooksProps, SearchBooksState> {
                                         </li>
                                     );
                                 })
-                            };
+                            }
                             </ol>
                         </div>
                     </div>
@@ -139,21 +139,34 @@ class SearchBooks extends React.Component<SearchBooksProps, SearchBooksState> {
     private searchBooks(query: string): Promise<Array<BookModel>> {
         if (query != null && query != undefined && query != "") {
             let searchPromise = BooksAPI.search(query)
+            .then((books: Array<BookModel>) => {
+                if(books && books.length > 0) {
+                    let bookModels = books.map((book) => {
+                        let bookModel = BookFactory.extractBookModel(book);
+                        return bookModel;
+                    });
+                    return bookModels;
+                }
+                return null;
+            })
             .then((books) => {
-                let bookModels = books.map((book) => {
-                    let bookModel = BookFactory.extractBookModel(book);
-                    return bookModel;
-                });
-                this.updateQuery(query);
-                this.updateBookRegistry(bookModels);
-
-                return bookModels;
+                   this.updateQuery(query);
+                   this.updateBooks(books);
             });
 
             return searchPromise;
         }
         // return empty array into promise if query was empty or null.
         return Promise.resolve([]);
+    }
+
+    private updateBooks(books: Array<BookModel>): void {
+        if (books != null && books != undefined) {
+            this.updateBookRegistry(books);
+        }
+        else {
+            this.updateBookRegistry([]);
+        }
     }
 
 

@@ -51,11 +51,15 @@ class Book extends React.Component<IBookProps>
                 <div className="book-authors">
                     {this.bookModel && this.bookModel.authors &&
                         this.bookModel.authors
-                            .map((author) => (
-                                <span>
-                                    {author}
-                                </span>))
-                            .join("<br/>")
+                            .map((author : string, index: number) => {
+                                return (
+                                    <span key={index}>
+                                        {(index > 0) && <br/>}
+                                        {author}
+                                    </span>
+                                )
+                                    ;
+                            })
                     }
                 </div>
             </div>

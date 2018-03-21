@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5c2fd598-fc39-4810-9fda-c5136604d9fc" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/components/BookRoom.tsx" afterPath="$PROJECT_DIR$/src/components/BookRoom.tsx" />
-      <change beforePath="$PROJECT_DIR$/src/components/Librarian.tsx" afterPath="$PROJECT_DIR$/src/components/Librarian.tsx" />
+      <change beforePath="$PROJECT_DIR$/src/components/Book.tsx" afterPath="$PROJECT_DIR$/src/components/Book.tsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -110,14 +109,14 @@
             <file leaf-file-name="BookModel.ts" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/models/BookModel.ts">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="0">
-                    <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+                  <state relative-caret-position="63">
+                    <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
                     <folding />
                   </state>
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="BookFactory.ts" pinned="false" current-in-tab="true">
+            <file leaf-file-name="BookFactory.ts" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/utility/BookFactory.ts">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="882">
@@ -149,11 +148,11 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="Book.tsx" pinned="false" current-in-tab="false">
+            <file leaf-file-name="Book.tsx" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/components/Book.tsx">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="546">
-                    <caret line="26" column="79" lean-forward="true" selection-start-line="26" selection-start-column="79" selection-end-line="26" selection-end-column="79" />
+                  <state relative-caret-position="1449">
+                    <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
                     <folding>
                       <element signature="e#0#41#0" expanded="true" />
                     </folding>
@@ -226,8 +225,8 @@
       <file leaf-file-name="BookRoom.tsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/BookRoom.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+            <state relative-caret-position="424">
+              <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
                 <marker date="1521594183391" expanded="true" signature="1400:2326" ph="..." />
@@ -354,7 +353,6 @@
         <option value="$PROJECT_DIR$/src/BookShelf.tsx" />
         <option value="$PROJECT_DIR$/src/Book.tsx" />
         <option value="$PROJECT_DIR$/src/Librarian.tsx" />
-        <option value="$PROJECT_DIR$/src/components/Book.tsx" />
         <option value="$PROJECT_DIR$/src/utility/BookRepository.ts" />
         <option value="$PROJECT_DIR$/src/utility/PascalOrCamelCaseToSentenceUtility.ts" />
         <option value="$PROJECT_DIR$/src/utility/TitleUtility.ts" />
@@ -369,6 +367,7 @@
         <option value="$PROJECT_DIR$/src/utility/BookFactory.ts" />
         <option value="$PROJECT_DIR$/src/components/Librarian.tsx" />
         <option value="$PROJECT_DIR$/src/components/BookRoom.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Book.tsx" />
       </list>
     </option>
   </component>
@@ -449,7 +448,7 @@
     <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="SearchEverywhereHistoryKey" value="librarian&#9;null&#9;null&#10;bookroom&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/BookRoom.tsx&#10;search&#9;null&#9;null&#10;searchbooks.tsx&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/SearchBooks.tsx&#10;myreads&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/MyReadsApp.tsx&#10;app.css&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/App.css&#10;index.tsx&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/index.tsx&#10;searchbook&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/SearchBooks.tsx&#10;bookshelf&#9;null&#9;null&#10;bookshel&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/models/BookShelfModel.ts&#10;bookr&#9;null&#9;null&#10;libraria&#9;null&#9;null&#10;sear&#9;null&#9;null&#10;s&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/SearchBooks.tsx&#10;library&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/node_modules/material-ui-icons/LibraryAdd.d.ts&#10;book.t&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/Book.tsx&#10;book&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/Book.tsx&#10;book.ts&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/utility/BooksAPI.ts&#10;book\&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/BookShelf.js&#10;bookroo&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/BookRoom.tsx&#10;.env&#9;null&#9;null&#10;tsco&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/tsconfig.json&#10;jest&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/my-reads/node_modules/react-scripts-ts/config/jest&#10;Jest&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/my-reads/node_modules/@types/jest" />
+    <property name="SearchEverywhereHistoryKey" value="book.ts&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/Book.tsx&#10;librarian&#9;null&#9;null&#10;bookroom&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/BookRoom.tsx&#10;search&#9;null&#9;null&#10;searchbooks.tsx&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/SearchBooks.tsx&#10;myreads&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/MyReadsApp.tsx&#10;app.css&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/App.css&#10;index.tsx&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/index.tsx&#10;searchbook&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/SearchBooks.tsx&#10;bookshelf&#9;null&#9;null&#10;bookshel&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/models/BookShelfModel.ts&#10;bookr&#9;null&#9;null&#10;libraria&#9;null&#9;null&#10;sear&#9;null&#9;null&#10;s&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/SearchBooks.tsx&#10;library&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/node_modules/material-ui-icons/LibraryAdd.d.ts&#10;book.t&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/Book.tsx&#10;book&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/Book.tsx&#10;book\&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/BookShelf.js&#10;bookroo&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/BookRoom.tsx&#10;.env&#9;null&#9;null&#10;tsco&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/tsconfig.json&#10;jest&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/my-reads/node_modules/react-scripts-ts/config/jest&#10;Jest&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/my-reads/node_modules/@types/jest" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.standard" value="C:\IIS\wwwroot\ReatCourse\MyReads\MyReads\node_modules\eslint" />
@@ -569,7 +568,7 @@
       <workItem from="1521449134027" duration="12097000" />
       <workItem from="1521488764452" duration="215000" />
       <workItem from="1521489004397" duration="13297000" />
-      <workItem from="1521507514370" duration="37596000" />
+      <workItem from="1521507514370" duration="39836000" />
     </task>
     <task id="LOCAL-00001" summary="Prior to Create-React-App Bootstrap">
       <created>1520960439465</created>
@@ -746,11 +745,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521593940377</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Fix: fixed &quot;None&quot; bookshelf issue">
+      <created>1521594228823</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1521594228823</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111776000" />
+    <option name="totallyTimeSpent" value="114016000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="363" width="1936" height="1056" extended-state="6" />
@@ -798,7 +804,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="After Create-React-App Bootstrapping" />
     <MESSAGE value="Adding some styles and icons to vcs" />
     <MESSAGE value=".env file" />
     <MESSAGE value="starter App.tsx" />
@@ -823,7 +828,8 @@
     <MESSAGE value="Fix: fixed some styling." />
     <MESSAGE value="Fix: fixed search functionality for searches with no results." />
     <MESSAGE value="Fix: fixed order of bookshelves." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: fixed order of bookshelves." />
+    <MESSAGE value="Fix: fixed &quot;None&quot; bookshelf issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: fixed &quot;None&quot; bookshelf issue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1003,14 +1009,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/BookModel.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/debounce-promise/dist/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
@@ -1048,16 +1046,6 @@
         <state relative-caret-position="63">
           <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="9" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Book.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" column="79" lean-forward="true" selection-start-line="26" selection-start-column="79" selection-end-line="26" selection-end-column="79" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1171,10 +1159,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/BookModel.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Book.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1449">
+          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/BookRoom.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        <state relative-caret-position="424">
+          <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
             <marker date="1521594183391" expanded="true" signature="1400:2326" ph="..." />

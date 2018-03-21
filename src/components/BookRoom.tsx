@@ -24,7 +24,8 @@ class BookRoom extends React.Component<BookRoomProps, any> {
     }
 
     private get possibleShelves(): Array<string | undefined> {
-        return BookFactory.getPossibleBookShelves(this.BookRegistry.Books);
+        let allShelves = BookFactory.getPossibleBookShelves(this.BookRegistry.Books);
+        return allShelves.filter(shelf => (shelf != null && shelf != undefined && shelf !== ""))
     }
 
     private get onUpdateBookShelf() : (bookId: string, shelf: string) => void {

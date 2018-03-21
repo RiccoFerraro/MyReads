@@ -33,7 +33,7 @@ class Librarian extends React.Component<ILibrarianProps, any>
                             this.props.onUpdateBookShelf(event.target.value);
                         }
                 }>
-                    <option value="none" disabled>Move to...</option>
+                    <option value="" disabled>Move to...</option>
                     {this.PossibleShelves.map((shelf) => {
                         return (
                             <option key={shelf} value={shelf}>
@@ -41,7 +41,7 @@ class Librarian extends React.Component<ILibrarianProps, any>
                             </option>
                             );
                     })}
-                    <option value="none">None</option>
+                    <option value="">None</option>
                 </select>
             </div>
         );

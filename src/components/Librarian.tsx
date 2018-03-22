@@ -33,8 +33,10 @@ class Librarian extends React.Component<ILibrarianProps, any> {
                         }
                         }>
                     <option value="" disabled>Move to...</option>
-                    {this.PossibleShelves.map((shelf) => {
-                        return (
+                    {this.PossibleShelves.filter((shelf) =>
+                        (shelf != null && shelf != undefined && shelf != ''))
+                        .map((shelf) => {
+                            return (
                             <option key={shelf} value={shelf}>
                                 {TitleUtility.makePascalOrCamelCaseToTitle(shelf)}
                             </option>

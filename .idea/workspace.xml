@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5c2fd598-fc39-4810-9fda-c5136604d9fc" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Index.tsx" afterPath="$PROJECT_DIR$/src/index.tsx" />
+      <change beforePath="$PROJECT_DIR$/src/components/Librarian.tsx" afterPath="$PROJECT_DIR$/src/components/Librarian.tsx" />
+      <change beforePath="$PROJECT_DIR$/src/components/MyReadsApp.tsx" afterPath="$PROJECT_DIR$/src/components/MyReadsApp.tsx" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchBooks.tsx" afterPath="$PROJECT_DIR$/src/components/SearchBooks.tsx" />
+      <change beforePath="$PROJECT_DIR$/src/utility/BooksAPI.ts" afterPath="$PROJECT_DIR$/src/utility/BooksAPI.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,10 +26,10 @@
             <file leaf-file-name="BookShelf.tsx" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/components/BookShelf.tsx">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="399">
-                    <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+                  <state relative-caret-position="378">
+                    <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
                     <folding>
-                      <element signature="e#0#41#0" expanded="true" />
+                      <element signature="e#0#39#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -58,12 +61,14 @@
       <content type="file-editors">
         <state>
           <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="MyReadsApp.tsx" pinned="false" current-in-tab="true">
+            <file leaf-file-name="MyReadsApp.tsx" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/components/MyReadsApp.tsx">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="0">
-                    <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="1" selection-end-column="32" />
-                    <folding />
+                  <state relative-caret-position="1323">
+                    <caret line="80" column="58" lean-forward="false" selection-start-line="80" selection-start-column="58" selection-end-line="80" selection-end-column="58" />
+                    <folding>
+                      <element signature="e#0#31#0" expanded="true" />
+                    </folding>
                   </state>
                 </provider>
               </entry>
@@ -73,6 +78,16 @@
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="0">
                     <caret line="0" column="46" lean-forward="false" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="BooksAPI.js" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/utility/BooksAPI.js">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="609">
+                    <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
                     <folding />
                   </state>
                 </provider>
@@ -120,7 +135,7 @@
               <entry file="file://$PROJECT_DIR$/src/utility/BookFactory.ts">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="882">
-                    <caret line="42" column="25" lean-forward="false" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+                    <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
                     <folding>
                       <element signature="e#0#45#0" expanded="true" />
                     </folding>
@@ -141,7 +156,7 @@
             <file leaf-file-name="BookShelf.js" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/components/BookShelf.js">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="399">
+                  <state relative-caret-position="-21">
                     <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
                     <folding />
                   </state>
@@ -151,10 +166,10 @@
             <file leaf-file-name="Book.tsx" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/components/Book.tsx">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="1428">
-                    <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+                  <state relative-caret-position="1092">
+                    <caret line="52" column="22" lean-forward="true" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
                     <folding>
-                      <element signature="e#0#41#0" expanded="true" />
+                      <element signature="e#0#39#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -171,10 +186,10 @@
             <file leaf-file-name="Librarian.tsx" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/components/Librarian.tsx">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="987">
-                    <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+                  <state relative-caret-position="399">
+                    <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
                     <folding>
-                      <element signature="e#0#41#0" expanded="true" />
+                      <element signature="e#0#39#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -200,11 +215,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BooksAPI.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BooksAPI.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/utility/BooksAPI.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="52" column="31" lean-forward="false" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+            <state relative-caret-position="447">
+              <caret line="38" column="31" lean-forward="true" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -213,10 +228,10 @@
       <file leaf-file-name="App.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="52" column="14" lean-forward="false" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+            <state relative-caret-position="105">
+              <caret line="57" column="16" lean-forward="false" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
               <folding>
-                <marker date="1521584508818" expanded="true" signature="2788:2790" ph="..." />
+                <marker date="1521694384506" expanded="true" signature="3015:3017" ph="..." />
               </folding>
             </state>
           </provider>
@@ -225,13 +240,10 @@
       <file leaf-file-name="BookRoom.tsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/BookRoom.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="35" column="32" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+            <state relative-caret-position="1134">
+              <caret line="60" column="23" lean-forward="true" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
-                <marker date="1521594183391" expanded="true" signature="1400:2326" ph="..." />
-                <marker date="1521594183391" expanded="true" signature="1422:2167" ph="..." />
-                <marker date="1521594183391" expanded="true" signature="1611:2161" ph="..." />
+                <marker date="1521701630856" expanded="true" signature="2269:2286" ph="..." />
               </folding>
             </state>
           </provider>
@@ -240,19 +252,12 @@
       <file leaf-file-name="SearchBooks.tsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/SearchBooks.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="778">
-              <caret line="152" column="43" lean-forward="false" selection-start-line="152" selection-start-column="43" selection-end-line="152" selection-end-column="43" />
+            <state relative-caret-position="252">
+              <caret line="124" column="51" lean-forward="true" selection-start-line="124" selection-start-column="51" selection-end-line="124" selection-end-column="51" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="arrow-back.svg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/icons/arrow-back.svg">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
@@ -267,8 +272,10 @@
         <entry file="file://$PROJECT_DIR$/src/index.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="231">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding>
+                <marker date="1521694384521" expanded="true" signature="127:167" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -283,14 +290,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lib.es6.d.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es6.d.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="15692" column="4" lean-forward="false" selection-start-line="15692" selection-start-column="4" selection-end-line="15692" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -358,20 +375,21 @@
         <option value="$PROJECT_DIR$/src/utility/BookRepository.ts" />
         <option value="$PROJECT_DIR$/src/utility/PascalOrCamelCaseToSentenceUtility.ts" />
         <option value="$PROJECT_DIR$/src/utility/TitleUtility.ts" />
-        <option value="$PROJECT_DIR$/src/utility/BooksAPI.ts" />
         <option value="$PROJECT_DIR$/src/App.tsx" />
         <option value="$PROJECT_DIR$/src/components/BookShelf.tsx" />
         <option value="$PROJECT_DIR$/src/index.css" />
-        <option value="$PROJECT_DIR$/src/components/MyReadsApp.tsx" />
         <option value="$PROJECT_DIR$/src/App.css" />
-        <option value="$PROJECT_DIR$/src/components/SearchBooks.tsx" />
         <option value="$PROJECT_DIR$/src/utility/BookFactory.ts" />
-        <option value="$PROJECT_DIR$/src/components/Librarian.tsx" />
-        <option value="$PROJECT_DIR$/src/components/BookRoom.tsx" />
         <option value="$PROJECT_DIR$/src/components/Book.tsx" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/index.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Librarian.tsx" />
+        <option value="$PROJECT_DIR$/src/components/BookRoom.tsx" />
+        <option value="$PROJECT_DIR$/src/components/SearchBooks.tsx" />
+        <option value="$PROJECT_DIR$/src/components/MyReadsApp.tsx" />
+        <option value="$PROJECT_DIR$/src/utility/BooksAPI.js" />
+        <option value="$PROJECT_DIR$/src/utility/BooksAPI.ts" />
       </list>
     </option>
   </component>
@@ -393,10 +411,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2552" />
-    <option name="y" value="-261" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="653" />
+    <option name="height" value="830" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -436,19 +454,7 @@
               <item name="MyReads" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyReads" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyReads" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyReads" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="utility" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyReads" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyReads" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="index.tsx" type="620a8d5e:NestingTreeNode" />
             </path>
           </expand>
           <select />
@@ -467,10 +473,10 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.tslint" value="C:\IIS\wwwroot\ReatCourse\MyReads\MyReads\node_modules\tslint" />
-    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="SearchEverywhereHistoryKey" value="book.ts&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/Book.tsx&#10;librarian&#9;null&#9;null&#10;bookroom&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/BookRoom.tsx&#10;search&#9;null&#9;null&#10;searchbooks.tsx&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/SearchBooks.tsx&#10;myreads&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/MyReadsApp.tsx&#10;app.css&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/App.css&#10;index.tsx&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/index.tsx&#10;searchbook&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/SearchBooks.tsx&#10;bookshelf&#9;null&#9;null&#10;bookshel&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/models/BookShelfModel.ts&#10;bookr&#9;null&#9;null&#10;libraria&#9;null&#9;null&#10;sear&#9;null&#9;null&#10;s&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/SearchBooks.tsx&#10;library&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/node_modules/material-ui-icons/LibraryAdd.d.ts&#10;book.t&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/Book.tsx&#10;book&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/Book.tsx&#10;book\&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/BookShelf.js&#10;bookroo&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/BookRoom.tsx&#10;.env&#9;null&#9;null&#10;tsco&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/tsconfig.json&#10;jest&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/my-reads/node_modules/react-scripts-ts/config/jest&#10;Jest&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/my-reads/node_modules/@types/jest" />
+    <property name="SearchEverywhereHistoryKey" value="bookap&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/utility/BooksAPI.js&#10;myreads&#9;null&#9;null&#10;booksa&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/utility/BooksAPI.ts&#10;book.ts&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/Book.tsx&#10;librarian&#9;null&#9;null&#10;bookroom&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/BookRoom.tsx&#10;search&#9;null&#9;null&#10;searchbooks.tsx&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/SearchBooks.tsx&#10;app.css&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/App.css&#10;index.tsx&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/index.tsx&#10;searchbook&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/SearchBooks.tsx&#10;bookshelf&#9;null&#9;null&#10;bookshel&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/models/BookShelfModel.ts&#10;bookr&#9;null&#9;null&#10;libraria&#9;null&#9;null&#10;sear&#9;null&#9;null&#10;s&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/SearchBooks.tsx&#10;library&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/node_modules/material-ui-icons/LibraryAdd.d.ts&#10;book.t&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/Book.tsx&#10;book&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/components/Book.tsx&#10;book\&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/BookShelf.js&#10;bookroo&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/src/BookRoom.tsx&#10;.env&#9;null&#9;null&#10;tsco&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/tsconfig.json&#10;jest&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/my-reads/node_modules/react-scripts-ts/config/jest&#10;Jest&#9;FILE&#9;file://C:/IIS/wwwroot/ReatCourse/MyReads/MyReads/my-reads/node_modules/@types/jest" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.standard" value="C:\IIS\wwwroot\ReatCourse\MyReads\MyReads\node_modules\eslint" />
@@ -795,11 +801,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521693690826</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Fix:  formatted the code in src.">
+      <created>1521694614314</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1521694614314</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118489000" />
+    <option name="totallyTimeSpent" value="125376000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -811,18 +824,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2552" y="-261" width="1096" height="1896" extended-state="6" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17102273" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1703125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24968368" sideWeight="0.5045278" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2597826" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25047258" sideWeight="0.4954722" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25859374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10441292" sideWeight="0.4954722" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24968368" sideWeight="0.5045278" order="2" side_tool="true" content_ui="tabs" />
@@ -857,7 +871,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Scaffolding out the Begginings of the app" />
     <MESSAGE value="feat: Nearly finished work on MyReadsApp Component" />
     <MESSAGE value="feat: Nearly finished work on BookRoom" />
     <MESSAGE value="feat: Nearly finished work on BookRoom Component" />
@@ -882,7 +895,8 @@
     <MESSAGE value="Fix: fixed Author display issue" />
     <MESSAGE value="Feat: added tsc to package.json as well as updated ReadME.md" />
     <MESSAGE value="Feat:  updated ReadME.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feat:  updated ReadME.md" />
+    <MESSAGE value="Fix:  formatted the code in src." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix:  formatted the code in src." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -891,13 +905,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tslint.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
@@ -1018,14 +1025,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/.js.map" />
     <entry file="file://$PROJECT_DIR$/src/models/BookToBookShelfMapModel.ts" />
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es6.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412335">
-          <caret line="19648" column="34" lean-forward="false" selection-start-line="19648" selection-start-column="34" selection-end-line="19648" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/IBookShelfUpdaterProps.ts" />
     <entry file="file://$PROJECT_DIR$/src/Bookshelf.tsx.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1062,14 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utility/BooksAPI.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="52" column="31" lean-forward="false" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/material-ui-icons/LibraryAdd.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1096,7 +1087,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/BookShelf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
+        <state relative-caret-position="-21">
           <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
           <folding />
         </state>
@@ -1104,10 +1095,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/BookShelf.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        <state relative-caret-position="378">
+          <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1125,25 +1116,19 @@
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MyReadsApp.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="1" selection-end-column="32" />
-          <folding />
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <marker date="1521694384521" expanded="true" signature="127:167" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="52" column="14" lean-forward="false" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+        <state relative-caret-position="105">
+          <caret line="57" column="16" lean-forward="false" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
           <folding>
-            <marker date="1521584508818" expanded="true" signature="2788:2790" ph="..." />
+            <marker date="1521694384506" expanded="true" signature="3015:3017" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1158,26 +1143,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utility/BookFactory.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="42" column="25" lean-forward="false" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Librarian.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="987">
-          <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/BookModel.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -1186,44 +1151,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Book.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/BookRoom.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="35" column="32" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <marker date="1521594183391" expanded="true" signature="1400:2326" ph="..." />
-            <marker date="1521594183391" expanded="true" signature="1422:2167" ph="..." />
-            <marker date="1521594183391" expanded="true" signature="1611:2161" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="987">
           <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SearchBooks.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="778">
-          <caret line="152" column="43" lean-forward="false" selection-start-line="152" selection-start-column="43" selection-end-line="152" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1238,10 +1170,94 @@
     <entry file="file://$PROJECT_DIR$/src/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BookRoom.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1134">
+          <caret line="60" column="23" lean-forward="true" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
+          <folding>
+            <marker date="1521701630856" expanded="true" signature="2269:2286" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utility/BookFactory.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Librarian.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SearchBooks.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="124" column="51" lean-forward="true" selection-start-line="124" selection-start-column="51" selection-end-line="124" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es6.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15692" column="4" lean-forward="false" selection-start-line="15692" selection-start-column="4" selection-end-line="15692" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Book.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="52" column="22" lean-forward="true" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MyReadsApp.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1323">
+          <caret line="80" column="58" lean-forward="false" selection-start-line="80" selection-start-column="58" selection-end-line="80" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utility/BooksAPI.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utility/BooksAPI.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="38" column="31" lean-forward="true" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>

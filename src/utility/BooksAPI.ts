@@ -31,9 +31,9 @@ export const getAll = () => {
     return debouncedPromise();
 };
 
-export const update = (book, shelf) => {
+export const update = (bookId : string, shelf) => {
     let debouncedPromise = debounce(() => {
-            return fetch(`${api}/books/${book.id}`, {
+            return fetch(`${api}/books/${bookId}`, {
                 method: 'PUT',
                 headers: {
                     ...headers,

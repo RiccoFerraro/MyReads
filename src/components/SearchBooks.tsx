@@ -5,10 +5,12 @@ import * as BooksAPI from "utility/BooksAPI"
 
 import BookRepository, {default as BookFactory} from "utility/BookFactory"
 import BookModel from "models/BookModel";
+import {string} from "prop-types";
 
 interface SearchBooksProps extends React.HTMLProps<SearchBooksProps> {
     onUpdateBookShelf: (bookId: string, shelf: string) => void;
     onCloseSearch: () => void;
+    shelvedBooksRegistry: BookRegistryModel;
 }
 
 interface SearchBooksState {
@@ -150,6 +152,9 @@ class SearchBooks extends React.Component<SearchBooksProps, SearchBooksState> {
                     return null;
                 })
                 .then((books) => {
+                    if(books) {
+                        books = this.addShelvesToFoundBooks(books)
+                    }
                     this.updateQuery(query);
                     this.updateBooks(books);
                 });
@@ -167,6 +172,29 @@ class SearchBooks extends React.Component<SearchBooksProps, SearchBooksState> {
         else {
             this.updateBookRegistry([]);
         }
+    }
+
+    private addShelvesToFoundBooks(foundBooks: Array<BookModel>)
+    : Array<BookModel>
+      {
+        if (foundBooks) {
+            foundBooks.forEach((foundBook) =>  {
+            let foundBooksWithShelfData =
+                this.props.shelvedBooksRegistry.Books.find((shelvedBook) =>
+                    (shelvedBook && shelvedBook != undefined)
+                    && (shelvedBook.id === foundBook.id)
+                    && (this.checkStringForNullOrEmpty(shelvedBook.shelf)));
+
+                    if(foundBooksWithShelfData) {
+                        foundBook.shelf = foundBooksWithShelfData.shelf;
+                    }
+            });
+        }
+        return foundBooks;
+      }
+
+    private checkStringForNullOrEmpty(stringAtHand: string | undefined): boolean {
+        return (stringAtHand != undefined && stringAtHand != null && stringAtHand != "")
     }
 
 

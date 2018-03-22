@@ -81,6 +81,7 @@ class MyReadsApplication extends React.Component<any, MyReadsAppState> {
                                             onUpdateBookShelf={(bookId: string, shelf: string) => this.updateBookShelf(
                                                 bookId,
                                                 shelf)}
+                                            shelvedBooksRegistry={this.state.bookRegistry}
                         />
                     }
                 }/>

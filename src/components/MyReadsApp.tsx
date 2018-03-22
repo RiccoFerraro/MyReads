@@ -1,6 +1,6 @@
 import * as React from "react";
 import {History} from "history";
-import { Route } from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import BookRegistryModel from "models/BookRegistryModel";
 import * as BooksAPI from "utility/BooksAPI";
 import BookRoom from "components/BookRoom";
@@ -29,7 +29,7 @@ class MyReadsApplication extends React.Component<any, MyReadsAppState> {
         this.getAllBooks();
     }
 
-    private getAllBooks() : void {
+    private getAllBooks(): void {
         BookRepository.getAllBooks()
             .then((books) => {
                 let bookRegistry: BookRegistryModel = {
@@ -48,17 +48,17 @@ class MyReadsApplication extends React.Component<any, MyReadsAppState> {
     private updateBookShelf(bookId: string, shelf: string): void {
         BooksAPI.update(bookId, shelf)
             .then((data) => {
-               this.setState((state: MyReadsAppState) => {
-                   let book = state.bookRegistry.Books
-                       .find((book) => book.id === bookId);
+                this.setState((state: MyReadsAppState) => {
+                    let book = state.bookRegistry.Books
+                        .find((book) => book.id === bookId);
 
-                   if(book) {
-                       book.shelf = shelf;
-                   }
+                    if (book) {
+                        book.shelf = shelf;
+                    }
 
-                   return state;
-               })
-        });
+                    return state;
+                })
+            });
     }
 
     render() {
@@ -68,21 +68,25 @@ class MyReadsApplication extends React.Component<any, MyReadsAppState> {
                     (props) => {
                         return (
                             <BookRoom bookRegistry={this.state.bookRegistry}
-                                        onUpdateBookShelf={ (bookId: string, shelf: string) => this.updateBookShelf(bookId, shelf)} />
+                                      onUpdateBookShelf={(bookId: string, shelf: string) => this.updateBookShelf(bookId,
+                                          shelf)}/>
                         );
                     }
                 }/>
                 <Route path={SearchBooks.searchBooksPageURL} render={
                     ({history}) => {
-                        return <SearchBooks onCloseSearch={() => { history.push(BookRoom.bookRoomPageURL); }}
-                                           onUpdateBookShelf={(bookId: string, shelf: string) => this.updateBookShelf(bookId, shelf)}
-                                           />
+                        return <SearchBooks onCloseSearch={() => {
+                            history.push(BookRoom.bookRoomPageURL);
+                        }}
+                                            onUpdateBookShelf={(bookId: string, shelf: string) => this.updateBookShelf(
+                                                bookId,
+                                                shelf)}
+                        />
                     }
                 }/>
             </div>
         );
     }
-
 
 
 }

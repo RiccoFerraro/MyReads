@@ -1,4 +1,5 @@
 import debounce from "debounce-promise";
+
 const api = "https://reactnd-books-api.udacity.com";
 
 
@@ -15,23 +16,24 @@ const headers = {
 const debounceTime = 200;
 
 export const get = (bookId) =>
-    fetch(`${api}/books/${bookId}`, { headers })
+    fetch(`${api}/books/${bookId}`, {headers})
         .then(res => res.json())
         .then(data => data.book)
 
 export const getAll = () => {
     let debouncedPromise = debounce(() => {
-        return fetch(`${api}/books`, {headers})
-        .then(res => res.json())
-        .then(data => data.books)}
-    , debounceTime);
+            return fetch(`${api}/books`, {headers})
+                .then(res => res.json())
+                .then(data => data.books)
+        }
+        , debounceTime);
 
     return debouncedPromise();
 };
 
 export const update = (book, shelf) => {
     let debouncedPromise = debounce(() => {
-        return fetch(`${api}/books/${book.id}`, {
+            return fetch(`${api}/books/${book.id}`, {
                 method: 'PUT',
                 headers: {
                     ...headers,
@@ -39,24 +41,26 @@ export const update = (book, shelf) => {
                 },
                 body: JSON.stringify({shelf})
             })
-                .then(res => res.json())}
-    , debounceTime);
+                .then(res => res.json())
+        }
+        , debounceTime);
 
     return debouncedPromise();
 };
 
 export const search = (query) => {
     let debouncedPromise = debounce(() => {
-        return fetch(`${api}/search`, {
+            return fetch(`${api}/search`, {
                 method: 'POST',
                 headers: {
                     ...headers,
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ query })
+                body: JSON.stringify({query})
             })
-            .then(res => res.json())
-            .then(data => data.books)}
+                .then(res => res.json())
+                .then(data => data.books)
+        }
         , debounceTime);
 
     return debouncedPromise();

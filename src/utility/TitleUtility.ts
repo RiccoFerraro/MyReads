@@ -2,7 +2,7 @@ class TitleUtility {
 
     public static makePascalOrCamelCaseToTitle(shelf: string | undefined) {
         // If the string is empty
-        if(!(shelf) ||  shelf.length === 0 || !shelf.trim()) {
+        if (!(shelf) || shelf.length === 0 || !shelf.trim()) {
             return shelf;
         }
         let upperCaseWithAddedSpaceResult = shelf.replace(/([A-Z])/g, " $1");

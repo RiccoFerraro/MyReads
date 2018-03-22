@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import BookModel from "models/BookModel";
 import Librarian from "components/Librarian";
 
@@ -8,27 +8,27 @@ interface IBookProps extends React.HTMLProps<IBookProps> {
     onUpdateBookShelf: (bookId: string, shelf: string) => void;
 }
 
-class Book extends React.Component<IBookProps>
-{
-    propTypes : IBookProps;
+class Book extends React.Component<IBookProps> {
+    propTypes: IBookProps;
 
     constructor(propTypes: IBookProps) {
         super(propTypes);
         this.propTypes = propTypes;
     }
-    private get bookModel() : BookModel {
+
+    private get bookModel(): BookModel {
         return this.props.bookModel;
     }
 
-    private get possibleShelves() : Array<string | undefined> {
+    private get possibleShelves(): Array<string | undefined> {
         return this.props.possibleShelves;
     }
 
-    private get onUpdateBookShelf() : (bookId: string, shelf: string) => void {
+    private get onUpdateBookShelf(): (bookId: string, shelf: string) => void {
         return this.props.onUpdateBookShelf;
     }
 
-    private get smallThumbnailUrl() : string {
+    private get smallThumbnailUrl(): string {
         let result: string = '';
         if (this.bookModel.imageLinks) {
             result = this.bookModel.imageLinks.smallThumbnail;
@@ -36,30 +36,33 @@ class Book extends React.Component<IBookProps>
         return result;
     }
 
-    render() : React.ReactElement<IBookProps> {
+    render(): React.ReactElement<IBookProps> {
         return (
             <div className="book">
                 <div className="book-top">
-                    <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${this.smallThumbnailUrl}")`}}>
-                        <Librarian  currentBookShelf={this.bookModel.shelf}
-                                    onUpdateBookShelf={(shelf: string) => { this.onUpdateBookShelf(this.bookModel.id, shelf) }}
-                                    possibleShelves = {this.possibleShelves} />
+                    <div className="book-cover"
+                         style={{width: 128, height: 193, backgroundImage: `url("${this.smallThumbnailUrl}")`}}>
+                        <Librarian currentBookShelf={this.bookModel.shelf}
+                                   onUpdateBookShelf={(shelf: string) => {
+                                       this.onUpdateBookShelf(this.bookModel.id, shelf)
+                                   }}
+                                   possibleShelves={this.possibleShelves}/>
                     </div>
                 </div>
                 <div className="book-title">{this.bookModel.title}
                 </div>
                 <div className="book-authors">
                     {this.bookModel && this.bookModel.authors &&
-                        this.bookModel.authors
-                            .map((author : string, index: number) => {
-                                return (
-                                    <span key={index}>
+                    this.bookModel.authors
+                        .map((author: string, index: number) => {
+                            return (
+                                <span key={index}>
                                         {(index > 0) && <br/>}
-                                        {author}
+                                    {author}
                                     </span>
-                                )
-                                    ;
-                            })
+                            )
+                                ;
+                        })
                     }
                 </div>
             </div>

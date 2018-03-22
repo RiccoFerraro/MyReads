@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import BookRegistryModel from "models/BookRegistryModel";
 import Bookshelf from "components/BookShelf"
 import BookFactory from "utility/BookFactory"
@@ -28,7 +28,7 @@ class BookRoom extends React.Component<BookRoomProps, any> {
         return allShelves.filter(shelf => (shelf != null && shelf != undefined && shelf !== ""))
     }
 
-    private get onUpdateBookShelf() : (bookId: string, shelf: string) => void {
+    private get onUpdateBookShelf(): (bookId: string, shelf: string) => void {
         return this.props.onUpdateBookShelf;
     }
 
@@ -42,23 +42,24 @@ class BookRoom extends React.Component<BookRoomProps, any> {
             <div className="list-books-content">
                 <div>
                     {this.possibleShelves.map((possibleShelf: string) => {
-                            return (
-                                <Bookshelf
-                                           key = {possibleShelf}
-                                           title={possibleShelf}
-                                           shelvedBooks={this.filterBookRegistryByShelf(possibleShelf)}
-                                           possibleShelves={this.possibleShelves}
-                                           onUpdateBookShelf={(bookId: string, shelf: string) => this.onUpdateBookShelf(bookId, shelf)}
-                                />
-                            );
-                        })
+                        return (
+                            <Bookshelf
+                                key={possibleShelf}
+                                title={possibleShelf}
+                                shelvedBooks={this.filterBookRegistryByShelf(possibleShelf)}
+                                possibleShelves={this.possibleShelves}
+                                onUpdateBookShelf={(bookId: string, shelf: string) => this.onUpdateBookShelf(bookId,
+                                    shelf)}
+                            />
+                        );
+                    })
                     }
                 </div>
 
                 <Link className="open-search link" to={SearchBooks.searchBooksPageURL}>
                     Add a book
                 </Link>
-        </div>);
+            </div>);
     }
 
 

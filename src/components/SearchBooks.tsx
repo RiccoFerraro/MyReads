@@ -7,7 +7,7 @@ import BookRepository, {default as BookFactory} from "utility/BookFactory"
 import BookModel from "models/BookModel";
 
 interface SearchBooksProps extends React.HTMLProps<SearchBooksProps> {
-    onUpdateBookShelf:  (bookId: string, shelf: string) => void;
+    onUpdateBookShelf: (bookId: string, shelf: string) => void;
     onCloseSearch: () => void;
 }
 
@@ -40,7 +40,7 @@ class SearchBooks extends React.Component<SearchBooksProps, SearchBooksState> {
         return BookFactory.getPossibleBookShelves(this.books);
     }
 
-    private get onUpdateBookShelf() : (bookId: string, shelf: string) => void {
+    private get onUpdateBookShelf(): (bookId: string, shelf: string) => void {
         return this.props.onUpdateBookShelf;
     }
 
@@ -49,7 +49,7 @@ class SearchBooks extends React.Component<SearchBooksProps, SearchBooksState> {
         this.updateQuery('');
     }
 
-    updateQuery(query: string) : void {
+    updateQuery(query: string): void {
         this.setState({
             query: query.trim()
         });
@@ -116,18 +116,18 @@ class SearchBooks extends React.Component<SearchBooksProps, SearchBooksState> {
                     <div className="list-books-content">
                         <div>
                             <ol className="books-grid">
-                            {
-                                this.books.map((bookModel: BookModel) => {
-                                    return (
-                                        <li>
-                                            <Book bookModel={bookModel}
-                                                  onUpdateBookShelf={this.onUpdateBookShelf}
-                                                  possibleShelves={this.possibleShelves}
-                                            />
-                                        </li>
-                                    );
-                                })
-                            }
+                                {
+                                    this.books.map((bookModel: BookModel) => {
+                                        return (
+                                            <li>
+                                                <Book bookModel={bookModel}
+                                                      onUpdateBookShelf={this.onUpdateBookShelf}
+                                                      possibleShelves={this.possibleShelves}
+                                                />
+                                            </li>
+                                        );
+                                    })
+                                }
                             </ol>
                         </div>
                     </div>
@@ -139,20 +139,20 @@ class SearchBooks extends React.Component<SearchBooksProps, SearchBooksState> {
     private searchBooks(query: string): Promise<Array<BookModel>> {
         if (query != null && query != undefined && query != "") {
             let searchPromise = BooksAPI.search(query)
-            .then((books: Array<BookModel>) => {
-                if(books && books.length > 0) {
-                    let bookModels = books.map((book) => {
-                        let bookModel = BookFactory.extractBookModel(book);
-                        return bookModel;
-                    });
-                    return bookModels;
-                }
-                return null;
-            })
-            .then((books) => {
-                   this.updateQuery(query);
-                   this.updateBooks(books);
-            });
+                .then((books: Array<BookModel>) => {
+                    if (books && books.length > 0) {
+                        let bookModels = books.map((book) => {
+                            let bookModel = BookFactory.extractBookModel(book);
+                            return bookModel;
+                        });
+                        return bookModels;
+                    }
+                    return null;
+                })
+                .then((books) => {
+                    this.updateQuery(query);
+                    this.updateBooks(books);
+                });
 
             return searchPromise;
         }

@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+﻿This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
+The Application was written with Typescript v2.7.2 and the ‘react-scripts-ts’ npm module. Rather than npm I used yarn for package management as well as to alias scripts. To use this application you must install and use yarn instead of npm. 
+
+
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
@@ -9,10 +13,10 @@ You can find the most recent version of this guide [here](https://github.com/fac
 - [Sending Feedback](#sending-feedback)
 - [Folder Structure](#folder-structure)
 - [Available Scripts](#available-scripts)
-  - [npm start](#npm-start)
-  - [npm test](#npm-test)
-  - [npm run build](#npm-run-build)
-  - [npm run eject](#npm-run-eject)
+  - [yarn start](#npm-start)
+  - [yarn test](#npm-test)
+  - [yarn run build](#npm-run-build)
+  - [yarn run eject](#npm-run-eject)
 - [Supported Browsers](#supported-browsers)
 - [Supported Language Features and Polyfills](#supported-language-features-and-polyfills)
 - [Syntax Highlighting in the Editor](#syntax-highlighting-in-the-editor)

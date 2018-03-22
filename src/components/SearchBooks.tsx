@@ -31,6 +31,9 @@ class SearchBooks extends React.Component<SearchBooksProps, SearchBooksState> {
         };
     }
 
+    componentWillUnmount() {
+        this.props.onCloseSearch();
+    }
 
     public static searchBooksPageURL: string = "/search";
 

@@ -76,7 +76,9 @@ class MyReadsApplication extends React.Component<any, MyReadsAppState> {
                 <Route path={SearchBooks.searchBooksPageURL} render={
                     ({history}) => {
                         return <SearchBooks onCloseSearch={() => {
+                            this.getAllBooks();
                             history.push(BookRoom.bookRoomPageURL);
+
                         }}
                                             onUpdateBookShelf={(bookId: string, shelf: string) => this.updateBookShelf(
                                                 bookId,

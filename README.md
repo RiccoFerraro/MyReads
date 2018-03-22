@@ -1,7 +1,19 @@
 ﻿This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-The Application was written with Typescript v2.7.2 and the ‘react-scripts-ts’ npm module. Rather than npm I used yarn for package management as well as to alias scripts. To use this application you must install and use yarn instead of npm. 
+The Application was written with Typescript v2.7.2 and the ‘react-scripts-ts’ npm module.
+Rather than npm I used yarn for package management as well as to alias scripts.
+To use this application you must install and use yarn instead of npm.
 
+To Install yarn follow the link: https://yarnpkg.com/en/docs/install
+
+Once you have installed Yarn. To Use the application. First navigate to the MyReads Project, then type:
+`yarn install`
+
+once that process is complete type:
+`yarn build`
+
+once that process is complete type:
+`yarn start`
 
 
 Below you will find some information on how to perform common tasks.<br>

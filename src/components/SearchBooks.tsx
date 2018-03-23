@@ -16,6 +16,7 @@ interface SearchBooksProps extends React.HTMLProps<SearchBooksProps> {
 interface SearchBooksState {
     bookRegistry: BookRegistryModel;
     query: string;
+    haveEnteredText: boolean
 }
 
 class SearchBooks extends React.Component<SearchBooksProps, SearchBooksState> {
@@ -27,7 +28,8 @@ class SearchBooks extends React.Component<SearchBooksProps, SearchBooksState> {
             bookRegistry: {
                 Books: []
             },
-            query: ''
+            query: '',
+            haveEnteredText:false
         };
     }
 
@@ -62,6 +64,12 @@ class SearchBooks extends React.Component<SearchBooksProps, SearchBooksState> {
         }
     }
 
+    updateEnteredTextSwitch() {
+        this.setState({
+            haveEnteredText: true
+        })
+    }
+
     updateBookRegistry(books: Array<BookModel>) {
         this.setState({
             bookRegistry: {
@@ -86,11 +94,20 @@ class SearchBooks extends React.Component<SearchBooksProps, SearchBooksState> {
                         <input type="text"
                                placeholder="Search by title or author"
                                onChange={(event) => {
-                                   this.searchBooks(event.target.value);
+                                   if (!this.state.haveEnteredText) {
+                                       this.updateEnteredTextSwitch();
+                                   }
+
+                                   if(this.state.query != event.target.value) {
+                                       this.searchBooks(event.target.value);
+                                   }
                                }}/>
                     </div>
                 </div>
                 <div className="search-books-results">
+                    {(this.books.length < 1) && (this.state.haveEnteredText) &&
+                        "No books were found. Please try a different Search."
+                    }
                     <div className="list-books-content">
                         <div>
                             <ol className="books-grid">

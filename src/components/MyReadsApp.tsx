@@ -46,6 +46,10 @@ class MyReadsApplication extends React.Component<any, MyReadsAppState> {
 
     // We are depending on the fact that if a Book is not on a shelf, it's shelf will be blank, empty, or null.
     private updateBookShelf(bookId: string, shelf: string): void {
+        if (shelf.toUpperCase() === "NONE") {
+            shelf = "";
+        }
+
         BooksAPI.update(bookId, shelf)
             .then((data) => {
                 this.setState((state: MyReadsAppState) => {

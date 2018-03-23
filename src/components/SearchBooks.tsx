@@ -55,9 +55,11 @@ class SearchBooks extends React.Component<SearchBooksProps, SearchBooksState> {
     }
 
     updateQuery(query: string): void {
-        this.setState({
-            query: query.trim()
-        });
+        if(this.state.query != query) {
+            this.setState({
+                query: query.trim()
+            });
+        }
     }
 
     updateBookRegistry(books: Array<BookModel>) {
@@ -67,35 +69,6 @@ class SearchBooks extends React.Component<SearchBooksProps, SearchBooksState> {
             }
         })
     }
-
-    // The BooksAPI has a search function which we can depend on! Use that instead of this mess!
-    // private get matchedAuthors(authors: Array<string>, regexMatch : RegExp): boolean {
-    //     let matches = authors.map((author) => regexMatch.test(author));
-    //
-    //     return matches
-    //        .filter((match) => match)
-    //        .length > 0;
-    // }
-    //
-    // private getMatchedBooks(query: string, books: Array<BookModel>) : Array<BookModel> {
-    //     if (this.state.query) {
-    //
-    //
-    //         const match = new RegExp(EscapeRegex(query), 'i');
-    //         return books.filter((book: BookModel) => {
-    //                 if(book != undefined || book != null && (match.test(book.title) || this.matchedAuthors(book.authors, match))) {
-    //                     return true;
-    //                 }
-    //                 return false;
-    //         }
-    //
-    //            ));
-    //
-    //     }
-    //     else {
-    //         return books;
-    //     }
-    // }
 
     render() {
         return (
@@ -191,6 +164,10 @@ class SearchBooks extends React.Component<SearchBooksProps, SearchBooksState> {
                     if(foundBooksWithShelfData) {
                         foundBook.shelf = foundBooksWithShelfData.shelf;
                     }
+                    else {
+                        foundBook.shelf = "None";
+                    }
+
             });
         }
         return foundBooks;

@@ -21,6 +21,7 @@ class Librarian extends React.Component<ILibrarianProps, any> {
     }
 
     private get PossibleShelves(): Array<string | undefined> {
+
         return this.props.possibleShelves;
     }
 
@@ -42,7 +43,6 @@ class Librarian extends React.Component<ILibrarianProps, any> {
                             </option>
                         );
                     })}
-                    <option value="">None</option>
                 </select>
             </div>
         );
